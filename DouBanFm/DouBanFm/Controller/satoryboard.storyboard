@@ -52,7 +52,7 @@
                                 <rect key="frame" x="-5" y="248" width="15" height="40"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1W-P4-0rE">
-                                <rect key="frame" x="42" y="256.5" width="25" height="25"/>
+                                <rect key="frame" x="42" y="256" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="E4E-EB-K5f"/>
                                     <constraint firstAttribute="height" constant="25" id="WxY-Yg-RrU"/>
@@ -68,7 +68,7 @@
                                 <state key="normal" image="button:TRd-6x-FU0:image"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeD-Xh-Zdu">
-                                <rect key="frame" x="203" y="255.5" width="25" height="25"/>
+                                <rect key="frame" x="203" y="255" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="33C-kg-lXF"/>
                                     <constraint firstAttribute="height" constant="25" id="UQB-zT-OyZ"/>
@@ -76,17 +76,13 @@
                                 <state key="normal" image="button:MeD-Xh-Zdu:image"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVL-M5-ZEQ">
-                                <rect key="frame" x="253" y="255.5" width="25" height="25"/>
+                                <rect key="frame" x="253" y="255" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="PPd-gL-Nkd"/>
                                     <constraint firstAttribute="height" constant="25" id="khL-lW-0V5"/>
                                 </constraints>
                                 <state key="normal" image="button:nVL-M5-ZEQ:image"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5Q3-D8-p36">
-                                <rect key="frame" x="0.0" y="363" width="320" height="480"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Nv-nZ-lxj">
                                 <rect key="frame" x="95" y="255.5" width="25" height="25"/>
                                 <constraints>
@@ -95,6 +91,10 @@
                                 </constraints>
                                 <state key="normal" image="button:3Nv-nZ-lxj:image"/>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5Q3-D8-p36">
+                                <rect key="frame" x="0.0" y="363" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
