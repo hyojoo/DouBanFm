@@ -97,6 +97,9 @@
 		07ECB9F62275925F00ED7CB6 /* DouBanFm */ = {
 			isa = PBXGroup;
 			children = (
+				07ECBA29227594A400ED7CB6 /* Model */,
+				07ECBA28227594A100ED7CB6 /* View */,
+				07ECBA272275948A00ED7CB6 /* Controller */,
 				07ECB9F72275925F00ED7CB6 /* AppDelegate.swift */,
 				07ECB9F92275925F00ED7CB6 /* ViewController.swift */,
 				07ECB9FB2275925F00ED7CB6 /* Main.storyboard */,
@@ -123,6 +126,27 @@
 				07ECBA192275926000ED7CB6 /* Info.plist */,
 			);
 			path = DouBanFmUITests;
+			sourceTree = "<group>";
+		};
+		07ECBA272275948A00ED7CB6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		07ECBA28227594A100ED7CB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		07ECBA29227594A400ED7CB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
