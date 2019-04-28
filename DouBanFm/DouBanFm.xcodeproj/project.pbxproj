@@ -14,6 +14,7 @@
 		07ECBA022275926000ED7CB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07ECBA002275926000ED7CB6 /* LaunchScreen.storyboard */; };
 		07ECBA0D2275926000ED7CB6 /* DouBanFmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ECBA0C2275926000ED7CB6 /* DouBanFmTests.swift */; };
 		07ECBA182275926000ED7CB6 /* DouBanFmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ECBA172275926000ED7CB6 /* DouBanFmUITests.swift */; };
+		07ECBA2B2275C3F300ED7CB6 /* satoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07ECBA2A2275C3F300ED7CB6 /* satoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		07ECBA132275926000ED7CB6 /* DouBanFmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DouBanFmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07ECBA172275926000ED7CB6 /* DouBanFmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanFmUITests.swift; sourceTree = "<group>"; };
 		07ECBA192275926000ED7CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07ECBA2A2275C3F300ED7CB6 /* satoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = satoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		07ECBA272275948A00ED7CB6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				07ECBA2A2275C3F300ED7CB6 /* satoryboard.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				07ECBA022275926000ED7CB6 /* LaunchScreen.storyboard in Resources */,
 				07ECB9FF2275926000ED7CB6 /* Assets.xcassets in Resources */,
 				07ECB9FD2275925F00ED7CB6 /* Main.storyboard in Resources */,
+				07ECBA2B2275C3F300ED7CB6 /* satoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
