@@ -172,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="131.25" y="137.5"/>
         </scene>
-        <!--ChannelController-->
+        <!--channelViewController-->
         <scene sceneID="6Hf-xG-Mi4">
             <objects>
-                <viewController id="2DP-FS-bYu" userLabel="ChannelController" customClass="ChannelController" customModule="DouBanFm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2DP-FS-bYu" userLabel="channelViewController" customClass="channelViewController" customModule="DouBanFm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UaD-Js-8Vu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,9 +192,23 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J3p-vM-Vda">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J3p-vM-Vda">
                                 <rect key="frame" x="0.0" y="49" width="320" height="431"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="channel" id="ASh-VN-ayV">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ASh-VN-ayV" id="Wbp-vR-Pak">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2DP-FS-bYu" id="ByX-W9-T1q"/>
+                                    <outlet property="delegate" destination="2DP-FS-bYu" id="Zs0-9F-oBO"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -203,6 +217,7 @@
                             <constraint firstItem="LKp-Wl-fcN" firstAttribute="trailing" secondItem="clD-a1-kee" secondAttribute="trailing" id="Ada-gr-D5w"/>
                             <constraint firstItem="LKp-Wl-fcN" firstAttribute="leading" secondItem="clD-a1-kee" secondAttribute="leading" id="CO3-IE-UMO"/>
                             <constraint firstItem="LKp-Wl-fcN" firstAttribute="top" secondItem="clD-a1-kee" secondAttribute="top" id="Igy-UL-a5n"/>
+                            <constraint firstItem="J3p-vM-Vda" firstAttribute="top" secondItem="LKp-Wl-fcN" secondAttribute="bottom" constant="8" id="Nas-4O-pHZ"/>
                             <constraint firstItem="J3p-vM-Vda" firstAttribute="leading" secondItem="clD-a1-kee" secondAttribute="leading" id="PqU-ex-VEV"/>
                             <constraint firstItem="clD-a1-kee" firstAttribute="bottom" secondItem="J3p-vM-Vda" secondAttribute="bottom" id="WYr-fS-MsS"/>
                         </constraints>

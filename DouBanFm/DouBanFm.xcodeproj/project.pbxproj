@@ -15,6 +15,9 @@
 		07ECBA022275926000ED7CB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07ECBA002275926000ED7CB6 /* LaunchScreen.storyboard */; };
 		07ECBA0D2275926000ED7CB6 /* DouBanFmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ECBA0C2275926000ED7CB6 /* DouBanFmTests.swift */; };
 		07ECBA182275926000ED7CB6 /* DouBanFmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ECBA172275926000ED7CB6 /* DouBanFmUITests.swift */; };
+		651629972277315F0066CEEE /* channelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651629962277315F0066CEEE /* channelViewController.swift */; };
+		65A01959227752430032B262 /* HttpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A01958227752430032B262 /* HttpController.swift */; };
+		A5D27DA71F41B7345CCECBB2 /* Pods_DouBanFm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF672CE626A148FEF839581 /* Pods_DouBanFm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,11 @@
 		07ECBA132275926000ED7CB6 /* DouBanFmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DouBanFmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07ECBA172275926000ED7CB6 /* DouBanFmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanFmUITests.swift; sourceTree = "<group>"; };
 		07ECBA192275926000ED7CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DAB3CECB655FAA78109B614 /* Pods-DouBanFm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouBanFm.debug.xcconfig"; path = "Target Support Files/Pods-DouBanFm/Pods-DouBanFm.debug.xcconfig"; sourceTree = "<group>"; };
+		651629962277315F0066CEEE /* channelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = channelViewController.swift; sourceTree = "<group>"; };
+		65A01958227752430032B262 /* HttpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpController.swift; sourceTree = "<group>"; };
+		8AF672CE626A148FEF839581 /* Pods_DouBanFm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouBanFm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB3028550E3B193B96F6CD77 /* Pods-DouBanFm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouBanFm.release.xcconfig"; path = "Target Support Files/Pods-DouBanFm/Pods-DouBanFm.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D27DA71F41B7345CCECBB2 /* Pods_DouBanFm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +92,8 @@
 				07ECBA0B2275926000ED7CB6 /* DouBanFmTests */,
 				07ECBA162275926000ED7CB6 /* DouBanFmUITests */,
 				07ECB9F52275925F00ED7CB6 /* Products */,
+				5F43D2C2E038D6EA2A2ACBB0 /* Pods */,
+				CA51B08DF2967982D00A366B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +144,8 @@
 			children = (
 				07ECB9F92275925F00ED7CB6 /* ViewController.swift */,
 				07ECB9FB2275925F00ED7CB6 /* Main.storyboard */,
+				651629962277315F0066CEEE /* channelViewController.swift */,
+				65A01958227752430032B262 /* HttpController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -152,6 +165,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5F43D2C2E038D6EA2A2ACBB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0DAB3CECB655FAA78109B614 /* Pods-DouBanFm.debug.xcconfig */,
+				EB3028550E3B193B96F6CD77 /* Pods-DouBanFm.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA51B08DF2967982D00A366B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AF672CE626A148FEF839581 /* Pods_DouBanFm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07ECBA1C2275926000ED7CB6 /* Build configuration list for PBXNativeTarget "DouBanFm" */;
 			buildPhases = (
+				64EA016299F6143827324F2C /* [CP] Check Pods Manifest.lock */,
 				07ECB9F02275925F00ED7CB6 /* Sources */,
 				07ECB9F12275925F00ED7CB6 /* Frameworks */,
 				07ECB9F22275925F00ED7CB6 /* Resources */,
+				881F8CD19DD6CDE80EBED6F7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -278,13 +310,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		64EA016299F6143827324F2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DouBanFm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		881F8CD19DD6CDE80EBED6F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DouBanFm/Pods-DouBanFm-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DouBanFm/Pods-DouBanFm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		07ECB9F02275925F00ED7CB6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				07C914052276BABD0010E9A2 /* EkoImage.swift in Sources */,
+				65A01959227752430032B262 /* HttpController.swift in Sources */,
 				07ECB9FA2275925F00ED7CB6 /* ViewController.swift in Sources */,
+				651629972277315F0066CEEE /* channelViewController.swift in Sources */,
 				07ECB9F82275925F00ED7CB6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +541,7 @@
 		};
 		07ECBA1D2275926000ED7CB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DAB3CECB655FAA78109B614 /* Pods-DouBanFm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -476,6 +560,7 @@
 		};
 		07ECBA1E2275926000ED7CB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB3028550E3B193B96F6CD77 /* Pods-DouBanFm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
