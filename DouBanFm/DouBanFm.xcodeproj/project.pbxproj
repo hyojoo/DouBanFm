@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07C914052276BABD0010E9A2 /* EkoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C914042276BABD0010E9A2 /* EkoImage.swift */; };
+		07C914072276D60C0010E9A2 /* ChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C914062276D60C0010E9A2 /* ChannelController.swift */; };
 		07ECB9F82275925F00ED7CB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ECB9F72275925F00ED7CB6 /* AppDelegate.swift */; };
 		07ECB9FA2275925F00ED7CB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ECB9F92275925F00ED7CB6 /* ViewController.swift */; };
 		07ECB9FD2275925F00ED7CB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07ECB9FB2275925F00ED7CB6 /* Main.storyboard */; };
@@ -14,7 +16,6 @@
 		07ECBA022275926000ED7CB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07ECBA002275926000ED7CB6 /* LaunchScreen.storyboard */; };
 		07ECBA0D2275926000ED7CB6 /* DouBanFmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ECBA0C2275926000ED7CB6 /* DouBanFmTests.swift */; };
 		07ECBA182275926000ED7CB6 /* DouBanFmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ECBA172275926000ED7CB6 /* DouBanFmUITests.swift */; };
-		07ECBA2B2275C3F300ED7CB6 /* satoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07ECBA2A2275C3F300ED7CB6 /* satoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07C914042276BABD0010E9A2 /* EkoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EkoImage.swift; sourceTree = "<group>"; };
+		07C914062276D60C0010E9A2 /* ChannelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelController.swift; sourceTree = "<group>"; };
 		07ECB9F42275925F00ED7CB6 /* DouBanFm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouBanFm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07ECB9F72275925F00ED7CB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07ECB9F92275925F00ED7CB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +51,6 @@
 		07ECBA132275926000ED7CB6 /* DouBanFmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DouBanFmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07ECBA172275926000ED7CB6 /* DouBanFmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanFmUITests.swift; sourceTree = "<group>"; };
 		07ECBA192275926000ED7CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07ECBA2A2275C3F300ED7CB6 /* satoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = satoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +105,6 @@
 				07ECBA28227594A100ED7CB6 /* View */,
 				07ECBA272275948A00ED7CB6 /* Controller */,
 				07ECB9F72275925F00ED7CB6 /* AppDelegate.swift */,
-				07ECB9F92275925F00ED7CB6 /* ViewController.swift */,
-				07ECB9FB2275925F00ED7CB6 /* Main.storyboard */,
 				07ECB9FE2275926000ED7CB6 /* Assets.xcassets */,
 				07ECBA002275926000ED7CB6 /* LaunchScreen.storyboard */,
 				07ECBA032275926000ED7CB6 /* Info.plist */,
@@ -133,7 +133,9 @@
 		07ECBA272275948A00ED7CB6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				07ECBA2A2275C3F300ED7CB6 /* satoryboard.storyboard */,
+				07ECB9F92275925F00ED7CB6 /* ViewController.swift */,
+				07ECB9FB2275925F00ED7CB6 /* Main.storyboard */,
+				07C914062276D60C0010E9A2 /* ChannelController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -141,6 +143,7 @@
 		07ECBA28227594A100ED7CB6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				07C914042276BABD0010E9A2 /* EkoImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -259,7 +262,6 @@
 				07ECBA022275926000ED7CB6 /* LaunchScreen.storyboard in Resources */,
 				07ECB9FF2275926000ED7CB6 /* Assets.xcassets in Resources */,
 				07ECB9FD2275925F00ED7CB6 /* Main.storyboard in Resources */,
-				07ECBA2B2275C3F300ED7CB6 /* satoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,8 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C914052276BABD0010E9A2 /* EkoImage.swift in Sources */,
 				07ECB9FA2275925F00ED7CB6 /* ViewController.swift in Sources */,
 				07ECB9F82275925F00ED7CB6 /* AppDelegate.swift in Sources */,
+				07C914072276D60C0010E9A2 /* ChannelController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
