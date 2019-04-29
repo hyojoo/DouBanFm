@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		07C914052276BABD0010E9A2 /* EkoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C914042276BABD0010E9A2 /* EkoImage.swift */; };
-		07C914072276D60C0010E9A2 /* ChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C914062276D60C0010E9A2 /* ChannelController.swift */; };
 		07ECB9F82275925F00ED7CB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ECB9F72275925F00ED7CB6 /* AppDelegate.swift */; };
 		07ECB9FA2275925F00ED7CB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ECB9F92275925F00ED7CB6 /* ViewController.swift */; };
 		07ECB9FD2275925F00ED7CB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07ECB9FB2275925F00ED7CB6 /* Main.storyboard */; };
@@ -37,7 +36,6 @@
 
 /* Begin PBXFileReference section */
 		07C914042276BABD0010E9A2 /* EkoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EkoImage.swift; sourceTree = "<group>"; };
-		07C914062276D60C0010E9A2 /* ChannelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelController.swift; sourceTree = "<group>"; };
 		07ECB9F42275925F00ED7CB6 /* DouBanFm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouBanFm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07ECB9F72275925F00ED7CB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07ECB9F92275925F00ED7CB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 			children = (
 				07ECB9F92275925F00ED7CB6 /* ViewController.swift */,
 				07ECB9FB2275925F00ED7CB6 /* Main.storyboard */,
-				07C914062276D60C0010E9A2 /* ChannelController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -289,7 +286,6 @@
 				07C914052276BABD0010E9A2 /* EkoImage.swift in Sources */,
 				07ECB9FA2275925F00ED7CB6 /* ViewController.swift in Sources */,
 				07ECB9F82275925F00ED7CB6 /* AppDelegate.swift in Sources */,
-				07C914072276D60C0010E9A2 /* ChannelController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
