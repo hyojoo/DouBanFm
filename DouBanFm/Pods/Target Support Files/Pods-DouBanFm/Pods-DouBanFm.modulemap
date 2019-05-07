@@ -1,0 +1,6 @@
+module Pods_DouBanFm {
+  umbrella header "Pods-DouBanFm-umbrella.h"
+
+  export *
+  module * { export * }
+}

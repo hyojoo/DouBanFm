@@ -9,20 +9,30 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Kingfisher
+//import AlamofireImage
 class ViewController:UIViewController,UITableViewDataSource,UITableViewDelegate,HttpProtocol {
+
+    
     //http代理实现
     func didReciveResults(results: AnyObject) {
         //print(results)
         let json = JSON(results)
         if  let channels = json["channels"].array{
             self.channelData = channels
-        }else if let song = json["song"].array{
-            self.songDate = song
+//            print(channelData)
+           
+        }
+        else if let song = json["song"].array{
+            //self.songDate = song
+            self.songDate.append(contentsOf: song)
             self.musicList.reloadData()
-            //            print(songDate)
+//                     print(songDate)
+            
             
         }
-        print(songDate.count)
+        //print(songDate)
+        
         
     }
     
@@ -55,9 +65,10 @@ class ViewController:UIViewController,UITableViewDataSource,UITableViewDelegate,
 //        为网络操作实例设置代理
         ehttp.delegate = self
 //        获取频道
-        ehttp.onSearch(url: "https://www.douban.com/j/app/radio/channels")
+//        ehttp.requestChannels()
 //        获取频道0的歌曲
-        ehttp.onSearch(url: "https://douban.fm/j/mine/playlist?type=s&sid=331663&pt=112.3&channel=3770138&pb=64&from=mainsite&r=a91682610b")
+        ehttp.requestMusic()
+//        ehttp.onSearch(url: "https://douban.fm/j/mine/playlist?type=s&sid=331663&pt=112.3&channel=3770138&pb=64&from=mainsite&r=a91682610b")
         
         
         // Do any additional setup after loading the view.
@@ -69,19 +80,35 @@ class ViewController:UIViewController,UITableViewDataSource,UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = musicList.dequeueReusableCell(withIdentifier: "douban") as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "douban") as! UITableViewCell
         let rowData = songDate[indexPath.row]
 //                设置标题
         cell.textLabel?.text = rowData["title"].string
         cell.detailTextLabel?.text = rowData["artist"].string
-        let url = rowData["picture"].string ?? ""
+        let url1 = rowData["picture"].string ?? ""
+        let urlStr = URL(string: url1)
+//        let data = NSData(contentsOf: urlStr! as URL)
+//        let image = UIImage(data: data! as Data)
+        cell.imageView?.bounds = CGRect.init(x:0,y:0,width: cell.bounds.height, height: cell.bounds.height)
         
-        Alamofire.request(url, method: .get).response{ (data) -> Void in
-            let img  = UIImage(data: data)
-            cell.imageView?.image = img
-        }
-                cell.imageView?.image = UIImage(named: "thumb")
+//        cell.imageView?.kf.indicatorType = .activity
+        cell.imageView?.kf.setImage(with: urlStr)
+        let image = UIImage(named: "defult")
+        cell.imageView?.kf.setImage(with: urlStr, placeholder: image)
         
+        
+        
+
+//        let url = URL(string: url1)!
+//        cell.imageView?.af_setImage(withURL: url)
+//        print(url1)
+//
+//     Alamofire.request(url1, method: .get).streamImage(){ (data) -> Void in
+//      Alamofire.request(url1, method: .get).res(){ (data) -> Void in
+//        let image:UIImage? = data
+//        
+//        // cell.imageView?.image = image
+//        }
         return cell
         
     }

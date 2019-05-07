@@ -12,13 +12,8 @@ class HttpController: NSObject {
     //定义一个代理
     var delegate:HttpProtocol?
     //接网址，回调代理方法传回数据
-    func onSearch(url:String) {
-//        let url2 = "http://httpbin.org/ip"
-//        Alamofire.request(url).responseJSON { response in
-//            guard let value = response.result.value else { return }
-//            let dictionary = value as! [String: Any]
-//            print("dictionary = ", dictionary)
-        
+    func requestChannels() {
+        let url = "https://www.douban.com/j/app/radio/channels"
         Alamofire.request(url, method: .get).responseJSON(options: JSONSerialization.ReadingOptions.mutableContainers) { (data) -> Void in
                         if let DATA = data.result.value {
                             self.delegate?.didReciveResults(results: DATA as AnyObject)
@@ -29,12 +24,27 @@ class HttpController: NSObject {
             
         }
     }
-    
+    func requestMusic() {
+        let url = "https://douban.fm/j/mine/playlist?type=n&channel=0&from=mainsite"
+        for _ in 0...10 {
+            
+            Alamofire.request(url, method: .get).responseJSON(options: JSONSerialization.ReadingOptions.mutableContainers) { (data) -> Void in
+                if let DATA = data.result.value {
+                    self.delegate?.didReciveResults(results: DATA as AnyObject)
+                } else {
+                    print("DATA获取失败")
+                }
+                self.delegate?.didReciveResults(results: data as AnyObject)
+
+            }
+        }
+
+    }
 }
     //定义http协议
     protocol HttpProtocol {
 //        定义一个方法接受一个参数是AnyObject
         func didReciveResults(results:AnyObject)
-        }
-
+//        func didReciveResultsmusic(results:AnyObject)
+}
 
