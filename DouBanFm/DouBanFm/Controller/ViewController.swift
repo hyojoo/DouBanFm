@@ -11,30 +11,8 @@ import Alamofire
 import SwiftyJSON
 import Kingfisher
 //import AlamofireImage
-class ViewController:UIViewController,UITableViewDataSource,UITableViewDelegate,HttpProtocol {
+class ViewController:UIViewController,UITableViewDataSource,UITableViewDelegate {
 
-    
-    //http代理实现
-    func didReciveResults(results: AnyObject) {
-        //print(results)
-        let json = JSON(results)
-        if  let channels = json["channels"].array{
-            self.channelData = channels
-//            print(channelData)
-           
-        }
-        else if let song = json["song"].array{
-            //self.songDate = song
-            self.songDate.append(contentsOf: song)
-            self.musicList.reloadData()
-//                     print(songDate)
-            
-            
-        }
-        //print(songDate)
-        
-        
-    }
     
     //背景
     @IBOutlet weak var bg: UIImageView!
@@ -62,12 +40,22 @@ class ViewController:UIViewController,UITableViewDataSource,UITableViewDelegate,
 //        设置tableview 数据源和代理
         musicList.dataSource = self
         musicList.delegate = self
-//        为网络操作实例设置代理
-        ehttp.delegate = self
 //        获取频道
 //        ehttp.requestChannels()
 //        获取频道0的歌曲
-        ehttp.requestMusic()
+        ehttp.requestMusic { (results) in
+            let json = JSON(results)
+            let song = json["song"].array
+                //self.songDate = song
+            self.songDate.append(contentsOf: song!)
+            self.musicList.reloadData()
+                //                     print(songDate)
+                
+                
+            
+            
+            
+        }
 //        ehttp.onSearch(url: "https://douban.fm/j/mine/playlist?type=s&sid=331663&pt=112.3&channel=3770138&pb=64&from=mainsite&r=a91682610b")
         
         
@@ -90,11 +78,10 @@ class ViewController:UIViewController,UITableViewDataSource,UITableViewDelegate,
 //        let data = NSData(contentsOf: urlStr! as URL)
 //        let image = UIImage(data: data! as Data)
         cell.imageView?.bounds = CGRect.init(x:0,y:0,width: cell.bounds.height, height: cell.bounds.height)
-        
+        cell.imageView?.contentMode = .scaleAspectFill
+        cell.imageView?.clipsToBounds = true
 //        cell.imageView?.kf.indicatorType = .activity
-        cell.imageView?.kf.setImage(with: urlStr)
-        let image = UIImage(named: "defult")
-        cell.imageView?.kf.setImage(with: urlStr, placeholder: image)
+        cell.imageView?.kf.setImage(with: urlStr, placeholder: UIImage(named: "defult"))
         
         
         
